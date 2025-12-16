@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NextDirex Solutions - GIS, Software, and Trade Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Custom styles for a modern feel */
+      .hero-bg {
+        background: linear-gradient(135deg, #1f2937, #374151);
+      }
+    </style>
+  </head>
+  <body class="text-gray-800 bg-gray-50">
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+      <nav
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <div class="text-2xl font-bold text-gray-900">NextDirex Solutions</div>
+        <div class="space-x-8 hidden md:flex">
+          <a
+            href="#home"
+            class="text-gray-600 hover:text-indigo-600 transition duration-300"
+            >Home
+          </a>
+          <a
+            href="#about"
+            class="text-gray-600 hover:text-indigo-600 transition duration-300"
+            >About Us
+          </a>
+          <div class="group relative">
+            <button
+              class="text-gray-600 hover:text-indigo-600 transition duration-300 focus:outline-none"
+            >
+              What We Offer
+            </button>
+            <div
+              class="absolute hidden group-hover:block bg-white shadow-lg rounded-md mt-2 w-48 py-2"
+            >
+              <a
+                href="#gis-services"
+                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                >GIS Services
+              </a>
+              <a
+                href="#software-solutions"
+                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                >Software Solutions
+              </a>
+              <a
+                href="#trade-services"
+                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                >Trade Services
+              </a>
+            </div>
+          </div>
+          <a
+            href="#contact"
+            class="text-gray-600 hover:text-indigo-600 transition duration-300"
+            >Contact Us
+          </a>
+        </div>
+        <button
+          class="md:hidden text-gray-600 hover:text-indigo-600 focus:outline-none"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            ></path>
+          </svg>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero-bg text-white py-20 md:py-32">
+        <div class="container mx-auto px-6 text-center">
+          <h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">
+            Empowering Your Business with
+          </h1>
+          <p class="text-2xl md:text-3xl font-light mb-8 text-indigo-300">
+            GIS Intelligence, Custom Software, and Global Trade
+          </p>
+          <p class="max-w-3xl mx-auto text-lg mb-10">
+            Delivering expert GIS services, Software Solutions and Trade
+            Services to support your business growth and success.
+          </p>
+          <a
+            href="#what-we-offer"
+            class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105"
+          >
+            Explore Our Services
+          </a>
+        </div>
+      </section>
+
+      <section id="what-we-offer" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6">
+          <h2 class="text-4xl font-extrabold text-center text-gray-900 mb-12">
+            What We Offer
+          </h2>
+          <div class="grid md:grid-cols-3 gap-10">
+            <div
+              id="gis-services"
+              class="bg-gray-100 rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden"
+            >
+              <div class="p-8">
+                <h3 class="text-2xl font-bold text-indigo-600 mb-4">
+                  🗺️ GIS Services
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  Providing GIS data services, custom maps, interactive web
+                  mapping, spatial analysis, and tailored GIS applications.
+                </p>
+                <ul class="list-disc list-inside text-sm text-gray-600 mb-6">
+                  <li>Data Acquisition (GPS, Remote Sensing)</li>
+                  <li>Data Processing & Transformation</li>
+                  <li>Custom Map Production & Web Map Development</li>
+                </ul>
+                <a
+                  href="#detailed-gis"
+                  class="text-indigo-600 font-semibold hover:text-indigo-800"
+                >
+                  Read More &rarr;
+                </a>
+              </div>
+            </div>
+
+            <div
+              id="software-solutions"
+              class="bg-gray-100 rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden"
+            >
+              <div class="p-8">
+                <h3 class="text-2xl font-bold text-indigo-600 mb-4">
+                  💻 Software Solutions
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  Delivering custom web and mobile development, system
+                  integration, database management, and cloud solutions.
+                </p>
+                <ul class="list-disc list-inside text-sm text-gray-600 mb-6">
+                  <li>Custom Web and Mobile Development</li>
+                  <li>System Integration and API Development</li>
+                  <li>UI/UX Design and AI-powered Applications</li>
+                </ul>
+                <a
+                  href="#detailed-software"
+                  class="text-indigo-600 font-semibold hover:text-indigo-800"
+                >
+                  Read More &rarr;
+                </a>
+              </div>
+            </div>
+
+            <div
+              id="trade-services"
+              class="bg-gray-100 rounded-xl shadow-lg hover:shadow-xl transition duration-300 overflow-hidden"
+            >
+              <div class="p-8">
+                <h3 class="text-2xl font-bold text-indigo-600 mb-4">
+                  🚢 Trade Services
+                </h3>
+                <p class="text-gray-600 mb-4">
+                  Offering reliable trade solutions from Canadian sourcing to
+                  export support and supply chain management.
+                </p>
+                <ul class="list-disc list-inside text-sm text-gray-600 mb-6">
+                  <li>Focus on Agricultural Crops and Fertilizers</li>
+                  <li>Canadian Sourcing and Export Support</li>
+                  <li>Supply Chain Management and Partnerships</li>
+                </ul>
+                <a
+                  href="#detailed-trade"
+                  class="text-indigo-600 font-semibold hover:text-indigo-800"
+                >
+                  Read More &rarr;
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-6">
+          <h2 class="text-4xl font-extrabold text-center text-gray-900 mb-12">
+            About Us
+          </h2>
+          <div class="grid md:grid-cols-2 gap-12 items-start">
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-4">Who We Are</h3>
+              <p class="text-gray-600 mb-4">
+                NextDirex Solutions, based in **Calgary, Alberta**, delivers
+                innovative and client-focused services across Canada and around
+                the world. We specialize in GIS services and custom software
+                development, and also provide reliable trade support. Founded in
+                2025, our team brings **decades of combined experience**.
+              </p>
+
+              <h3 class="text-2xl font-bold text-gray-900 mb-4 mt-6">
+                Industries We Serve
+              </h3>
+              <p class="text-gray-600 mb-4">
+                We primarily serve the **mining industry** , and also support
+                **tourism, agriculture** and other sectors. Our trade services
+                focus specifically on **agricultural crops and fertilizers**.
+              </p>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-indigo-600 mb-4">
+                Our Mission & Vision
+              </h3>
+              <div class="mb-6 border-l-4 border-indigo-500 pl-4">
+                <p class="font-semibold text-gray-700">Mission:</p>
+                <p class="text-gray-600">
+                  To help companies overcome their business challenges by
+                  providing simple, actionable solutions that enable them to
+                  move forward with confidence.
+                </p>
+              </div>
+              <div class="border-l-4 border-indigo-500 pl-4">
+                <p class="font-semibold text-gray-700">Vision:</p>
+                <p class="text-gray-600">
+                  Empowering businesses to grow sustainably through trusted
+                  partnerships, innovative solutions, and reliable services.
+                </p>
+              </div>
+
+              <h3 class="text-2xl font-bold text-gray-900 mb-4 mt-6">
+                Our Expert Team
+              </h3>
+              <p class="text-gray-600">
+                Our team consists of **highly skilled solutions experts**. The
+                team includes **four leadership roles** overseeing GIS services,
+                software development, geospatial development and trader
+                relations, with each leader bringing **over 20 years of hands-on
+                experience**.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-6">
+          <h2 class="text-4xl font-extrabold text-center text-gray-900 mb-4">
+            Contact Us
+          </h2>
+          <p class="text-center text-xl text-gray-600 mb-12">
+            Contact us to discover how we can support your business with GIS
+            services, software solutions, and trade services.
+          </p>
+
+          <div class="max-w-4xl mx-auto bg-gray-100 p-8 rounded-xl shadow-lg">
+            <div class="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 class="text-2xl font-bold text-indigo-600 mb-4">
+                  Contact Information
+                </h3>
+                <div class="space-y-3 text-gray-700">
+                  <p><strong>Managing Executive:</strong> Janaka Ratnayake</p>
+                  <p><strong>Location:</strong> Calgary, AB, Canada</p>
+                  <p><strong>Phone:</strong> 403-671-7630</p>
+                  <p>
+                    <strong>Email:</strong>
+                    <a
+                      href="mailto:janaka@nextdirex.com"
+                      class="text-indigo-600 hover:underline"
+                      >janaka@nextdirex.com</a
+                    >
+                  </p>
+                  <div class="pt-4">
+                    <strong class="block mb-2">Social Media Links:</strong>
+                    <div class="flex space-x-4">
+                      <a href="#" class="text-gray-500 hover:text-indigo-600">
+                        <svg
+                          class="w-6 h-6"
+                          fill="currentColor"
+                          viewBox="0 0 24 24"
+                        ></svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <h3 class="text-2xl font-bold text-indigo-600 mb-4">
+                  Send a Message
+                </h3>
+                <form action="#" method="POST" class="space-y-4">
+                  <input
+                    type="text"
+                    placeholder="First Name"
+                    class="w-full p-3 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500"
+                    required
+                  />
+                  <input
+                    type="text"
+                    placeholder="Last Name"
+                    class="w-full p-3 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500"
+                    required
+                  />
+                  <input
+                    type="text"
+                    placeholder="Company"
+                    class="w-full p-3 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500"
+                  />
+                  <input
+                    type="text"
+                    placeholder="Job Title"
+                    class="w-full p-3 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500"
+                  />
+                  <input
+                    type="tel"
+                    placeholder="Phone Number"
+                    class="w-full p-3 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500"
+                  />
+                  <input
+                    type="email"
+                    placeholder="Email"
+                    class="w-full p-3 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500"
+                    required
+                  />
+                  <textarea
+                    placeholder="Message"
+                    rows="4"
+                    class="w-full p-3 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500"
+                    required
+                  ></textarea>
+
+                  <div class="pt-2">
+                    <p class="font-semibold mb-2">
+                      I would like more information about:
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                      <label class="flex items-center">
+                        <input
+                          type="checkbox"
+                          name="interest"
+                          value="GIS services"
+                          class="form-checkbox h-5 w-5 text-indigo-600 rounded"
+                        />
+                        <span class="ml-2 text-gray-700">GIS services </span>
+                      </label>
+                      <label class="flex items-center">
+                        <input
+                          type="checkbox"
+                          name="interest"
+                          value="Software Solutions"
+                          class="form-checkbox h-5 w-5 text-indigo-600 rounded"
+                        />
+                        <span class="ml-2 text-gray-700"
+                          >Software Solutions
+                        </span>
+                      </label>
+                      <label class="flex items-center">
+                        <input
+                          type="checkbox"
+                          name="interest"
+                          value="Trade services"
+                          class="form-checkbox h-5 w-5 text-indigo-600 rounded"
+                        />
+                        <span class="ml-2 text-gray-700">Trade services </span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <button
+                    type="submit"
+                    class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-4 rounded-lg transition duration-300 transform hover:scale-"
+                  >
+                    Submit
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+      <div class="container mx-auto px-6 text-center">
+        <p>&copy; 2025 NextDirex Solutions Inc. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
