@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NextDirex Solutions - GIS Intelligence & Custom Software</title>
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
     * {
@@ -210,14 +211,14 @@
     }
 
     .service-img {
-      height: 250px;
+      height: 300px;
       overflow: hidden;
     }
 
     .service-img img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: fill;
       transition: var(--transition);
     }
 
@@ -681,7 +682,7 @@
           <div class="services-grid">
             <div class="service-card">
               <div class="service-img">
-                <img src="https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?w=800" alt="GIS Services" />
+                <img src="images/gis.png" alt="GIS Services" />
               </div>
               <div class="service-content">
                 <h3>GIS Services</h3>
@@ -982,7 +983,7 @@
             <div class="contact-card">
               <i class="fas fa-user-tie"></i>
               <h3>Contact Person</h3>
-              <p><strong>Janaka Ratnayake</strong><br />Managing Executive</p>
+              <p><strong>Janaka Ratnayake</strong><br />Managing Director</p>
               <p><strong>Phone:</strong> 403-671-7630</p>
               <p><strong>Email:</strong> janaka@nextdirex.com</p>
             </div>
@@ -1134,62 +1135,62 @@
         : '<i class="fas fa-bars"></i>';
     });
 
-    // Page Navigation
+    // Smooth Scroll Navigation
+    // Smooth Scroll Navigation
     const navLinksEl = document.querySelectorAll(".nav-link");
-    const pages = document.querySelectorAll(".page");
+    const scrollLinks = document.querySelectorAll('a[href^="#"]:not([href="#"])');
+    const sections = document.querySelectorAll("section");
+    const header = document.querySelector("header");
 
-    function showPage(pageId) {
-      // Hide all pages
-      pages.forEach((page) => {
-        page.classList.remove("active-page");
-      });
+    function smoothScroll(targetId) {
+      const targetSection = document.getElementById(targetId);
+      if (targetSection) {
+        const headerHeight = header.offsetHeight;
+        const elementPosition = targetSection.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
 
-      // Show selected page
-      document.getElementById(pageId).classList.add("active-page");
-
-      // Update active nav link
-      navLinksEl.forEach((link) => {
-        link.classList.remove("active");
-        if (link.getAttribute("href") === `#${pageId}`) {
-          link.classList.add("active");
-        }
-      });
-
-      // Close mobile menu if open
-      if (navLinks.classList.contains("active")) {
-        navLinks.classList.remove("active");
-        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth"
+        });
       }
     }
 
-    // Add click event to nav links
-    navLinksEl.forEach((link) => {
+    // Add click event to all scroll links
+    scrollLinks.forEach((link) => {
       link.addEventListener("click", (e) => {
         e.preventDefault();
-        const pageId = link.getAttribute("href").substring(1);
-        showPage(pageId);
+        const targetId = link.getAttribute("href").substring(1);
 
-        // Update URL hash
-        window.location.hash = pageId;
+        smoothScroll(targetId);
 
-        // Smooth scroll to top
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
+        // Close mobile menu if open
+        if (navLinks.classList.contains("active")) {
+          navLinks.classList.remove("active");
+          mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+        }
       });
     });
 
-    // Handle hash changes (back/forward navigation)
-    window.addEventListener("hashchange", () => {
-      const hash = window.location.hash.substring(1);
-      if (hash) {
-        showPage(hash);
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
-      }
+    // Scroll Spy to update active link state
+    window.addEventListener("scroll", () => {
+      let current = "";
+      const headerHeight = header.offsetHeight;
+
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= (sectionTop - headerHeight - 50)) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      navLinksEl.forEach((link) => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === `#${current}`) {
+          link.classList.add("active");
+        }
+      });
     });
 
     // Contact Form Submission
@@ -1228,9 +1229,13 @@
       }
     });
 
-    // Set initial page based on URL hash or default to home
+    // Set initial page based on URL hash
     const initialHash = window.location.hash.substring(1);
-    showPage(initialHash || "home");
+    if (initialHash) {
+      setTimeout(() => {
+        smoothScroll(initialHash);
+      }, 100);
+    }
   </script>
 </body>
 
